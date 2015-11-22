@@ -3,14 +3,17 @@ require 'httparty'
 
 namespace :heroku do
   desc "Seed heroku db"
-  task :seed => :environment do
+  task :import_categories => :environment do
     categories = CSV.read('db/data/ethnic-group.csv')
 
     categories.each do |row|
       c = Category.create(name: row[1])
       puts c.inspect
     end
+  end
 
+  desc "import users"
+  task :import_users => :environment do
     (1..10).each do |num|
       url = "https://idfy.0x10.info/api/idfy-status?type=json&query=list_member&page=#{num}"
       response = HTTParty.get url
