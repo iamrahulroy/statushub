@@ -40,6 +40,7 @@ gem 'draper'
 gem 'devise'
 gem 'faker'
 gem 'prawn'
+gem 'chartkick'
 
 group :production do
   gem 'pg'

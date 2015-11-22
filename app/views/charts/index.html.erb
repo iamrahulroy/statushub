@@ -1,0 +1,17 @@
+<h1>Charts Charts Everywhere</h1>
+
+<h4>User Chart by height</h4>
+<%= pie_chart User.group(:height).count %>
+
+
+<h4>User Chart by Vegan</h4>
+<%= pie_chart User.group(:is_veg).count %>
+
+<h4>User Chart by drinking habit</h4>
+<%= pie_chart User.group(:drink).count %>
+
+<h4>User category distribution</h4>
+<%= area_chart User.group(:category_id).maximum(:id) %>
+
+<h4>Scatter Users by height & weight</h4>
+<%= scatter_chart User.pluck(:height, :weight) %>
