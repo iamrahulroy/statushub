@@ -14,3 +14,10 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+solr/*
+!solr/conf/
+log/sunspot-solr-development.log.lck
+
+.byebug_history
+public/uploads/
