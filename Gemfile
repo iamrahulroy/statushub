@@ -35,5 +35,5 @@ gem 'sunspot_solr'
 gem 'httparty'
 gem 'draper'
 gem 'devise'
-
+gem 'faker'
 
