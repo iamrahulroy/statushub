@@ -27,6 +27,7 @@ Deployment on Heorku:
 Caveats: Search & image feature won't work on Heroku as Heroku's filesystem is readonly and solr search add on is paid on heroku https://elements.heroku.com/addons/websolr
 
 Screenshots:
+All of the screenshots are in screenshots directory.
 
 Home page: Just like the one shown in the wireframe
 ![root page](https://www.dropbox.com/s/kapm5e064yk4phi/Screenshot%202015-11-22%2020.40.32.png?dl=0)

@@ -24,6 +24,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.chart_data
+    User.chart_data
+  end
+
 end
 
 # == Schema Information
