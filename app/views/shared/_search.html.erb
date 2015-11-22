@@ -1,8 +1,14 @@
 <div class="container">
-  <%= form_tag search_users_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :query, params[:query], class: 'form-search search-form', placeholder: 'Search (by status, height or ethnicity)' %>
-    <%= submit_tag "Search!", class: 'btn btn-primary' %>
-  </p>
-  <% end %>
+  <div class="col-md-8">
+    <%= form_tag search_users_path, :method => :get do %>
+    <p>
+      <%= text_field_tag :query, params[:query], class: 'form-search search-form', placeholder: 'Search (by status, height or ethnicity)' %>
+      <%= submit_tag "Search!", class: 'btn btn-primary' %>
+    </p>
+    <% end %>
+  </div>
+  <div class="col-md-4">
+    <%= link_to 'All', users_path, class: 'btn btn-info' %>
+    <%= link_to 'Vegan', users_path(vegan: true), class: 'btn btn-info' %>
+  </div>
 </div>
