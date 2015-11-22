@@ -14,7 +14,7 @@ namespace :heroku do
     (1..10).each do |num|
       url = "https://idfy.0x10.info/api/idfy-status?type=json&query=list_member&page=#{num}"
       response = HTTParty.get url
-      sleep(1)
+      sleep(10)
       response["members"].each do |member|
         # TODO: Use metaprogramming to improve this.
         user = User.new
