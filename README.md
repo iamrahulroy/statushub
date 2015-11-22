@@ -1,4 +1,4 @@
-Statushub: A product by hackers at Idfy for hackers. Checkout the demo here
+Statushub: A product by hackers at Idfy for hackers. Checkout the [demo here](https://immense-cove-8413.herokuapp.com/)
 
 Installation instructions:
 * cd statushub && bundle
