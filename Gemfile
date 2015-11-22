@@ -46,4 +46,5 @@ gem 'carrierwave-dropbox'
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'rollbar'
 end
