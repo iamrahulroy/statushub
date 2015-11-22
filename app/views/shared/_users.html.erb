@@ -7,7 +7,7 @@
       vegan: <span class="<%= is_vegan?(user) %>"></span>
       height: <%= user.height %> cm
       weight: <%= weight_in_kg(user.weight) %> KG
-      <div class="my-image pull-right img-circle"><%= image_tag user.image.url %><br/></div>
+      <div class="my-image pull-right"><%= image_tag user.image.url, class: 'img-circle' %><br/></div>
       <%= link_to "Download", user_path(user, format: "pdf"), class: 'btn btn-info' %>
     </div>
   <% end %>
