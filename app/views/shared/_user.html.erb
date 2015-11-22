@@ -2,6 +2,7 @@
   <div class="well infobox my-well">
     <span class="btn btn-default" id="horizonal_button"> <%= user.category.name %></span><br><br>
     <blockquote><p><%= user_status(user) %></p></blockquote>
+    <%= share_status(user) %>
     drinks: <span class="<%= drink?(user) %>"></span> |
     vegan: <span class="<%= is_vegan?(user) %>"></span> |
     height: <%= user_height(user) %> cm |

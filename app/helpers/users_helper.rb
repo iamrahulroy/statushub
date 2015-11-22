@@ -19,4 +19,12 @@ module UsersHelper
     user.status ? user.status : 'N/A'
   end
 
+  def share_status(user)
+    user.status ? social_share_button_tag(user.status) : social_share_button_tag(default_text)
+  end
+
+  def default_text
+    'Checkout these cool status on Idfy Statushub'
+  end
+
 end
