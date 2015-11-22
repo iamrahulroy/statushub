@@ -1,0 +1,8 @@
+<div class="container">
+  <%= form_tag search_users_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :query, params[:query], class: 'form-search search-form', placeholder: 'Search (by status, height or ethnicity)' %>
+    <%= submit_tag "Search!", class: 'btn btn-primary' %>
+  </p>
+  <% end %>
+</div>

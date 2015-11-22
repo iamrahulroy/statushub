@@ -26,6 +26,17 @@ Deployment on Heorku:
 
 Caveats: Search & image feature won't work on Heroku as Heroku's filesystem is readonly and solr search add on is paid on heroku https://elements.heroku.com/addons/websolr
 
+Screenshots:
+
+Home page: Just like the one shown in the wireframe
+![root page](https://www.dropbox.com/s/ejy5d8np7cvqkhp/Screenshot%202015-11-22%2019.14.28.png?dl=0)
+
+Pagination:
+![pagination on index page](https://www.dropbox.com/s/4kwvz2ikjlyx0nx/Screenshot%202015-11-22%2019.18.16.png?dl=0)
+
+Favorites page:
+![favorites page](https://www.dropbox.com/s/059i84h1688mjqt/Screenshot%202015-11-22%2019.21.57.png?dl=0)
+
 Notes:
 
 1. Avoid different database in different environment(One of the rule from 'The Twelve Factors'). Breaking this rule for reviewer's convenience.
