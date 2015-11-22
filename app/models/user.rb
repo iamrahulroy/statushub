@@ -16,13 +16,13 @@ class User < ActiveRecord::Base
   scope :vegan, -> (is_veg) { where is_veg: is_veg }
   scope :vegans, -> { where is_veg: true }
 
-  searchable do
-    text :status
-    integer :height
-    string :category do
-      category.try(:name)
-    end
-  end
+  # searchable do
+  #   text :status
+  #   integer :height
+  #   string :category do
+  #     category.try(:name)
+  #   end
+  # end
 
 end
 
