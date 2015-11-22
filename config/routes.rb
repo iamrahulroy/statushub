@@ -8,6 +8,6 @@ Rails.application.routes.draw do
       get :search
     end
   end
-  resources :categories, only: [:index, :show]
+  resources :categories, only: [:show]
   resources :user_favorites, only: [:create, :destroy, :index]
 end

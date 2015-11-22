@@ -1,4 +1,5 @@
 class UserFavoritesController < ApplicationController
+  before_action :authenticate_user!
   before_action :get_user_favorite, only: [:destroy]
 
   def index
@@ -28,5 +29,11 @@ class UserFavoritesController < ApplicationController
   def get_user_favorite
     # debugger
     @user_favorite = current_user.user_favorites.find_by(favorite_id: params[:id])
+  end
+
+  def authenticate_user!
+    unless current_user
+      redirect_to root_path
+    end
   end
 end
