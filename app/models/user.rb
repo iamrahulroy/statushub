@@ -8,6 +8,11 @@ class User < ActiveRecord::Base
 
   belongs_to :category
 
+  has_many :user_favorites
+  has_many :favorites, through: :user_favorites
+  has_many :inverse_user_favorites, class_name: 'UserFavorite', foreign_key: 'favorite_id'
+  has_many :inverse_favorites, through: :inverse_user_favorites, source: :user
+
   scope :vegan, -> (is_veg) { where is_veg: is_veg }
   scope :vegans, -> { where is_veg: true }
 

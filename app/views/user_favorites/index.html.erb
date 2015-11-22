@@ -1,0 +1,14 @@
+<h1>User Favorites</h1>
+<% @favorites.each do |favorite| %>
+  <p>
+    <%= favorite.try(:status) %>
+    - <%= link_to 'Remove', user_favorite_path(favorite), method: :delete %>
+  </p>
+<% end %>
+
+
+<div class="custom_pagination">
+  <%= will_paginate @favorites %>
+</div>
+
+
