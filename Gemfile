@@ -36,6 +36,7 @@ gem 'httparty'
 gem 'draper'
 gem 'devise'
 gem 'faker'
+gem 'prawn'
 
 group :production do
   gem 'rails_12factor'

@@ -1,13 +1,14 @@
-<div class="users" >
+<div class="users container" >
   <% @users.each do |user| %>
-    <div class="well infobox">
-      <div class="btn btn-default" id="horizonal_button"> <%= user.category.name %></div><br>
+    <div class="well infobox my-well">
+      <span class="btn btn-default" id="horizonal_button"> <%= user.category.name %></span><br>
       <blockquote><p><%= user.status %></p></blockquote>
-      drinks: <div class="<%= drink?(user) %>"></div>
-      vegan: <div class="<%= is_vegan?(user) %>"></div>
+      drinks: <span class="<%= drink?(user) %>"></span>
+      vegan: <span class="<%= is_vegan?(user) %>"></span>
       height: <%= user.height %> cm
       weight: <%= weight_in_kg(user.weight) %> KG
-      <div><%= image_tag user.image.url %><br/></div>
+      <div class="my-image pull-right img-circle"><%= image_tag user.image.url %><br/></div>
+      <%= link_to "Download", user_path(user, format: "pdf"), class: 'btn btn-info' %>
     </div>
   <% end %>
 </div>
