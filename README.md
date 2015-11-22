@@ -29,13 +29,13 @@ Caveats: Search & image feature won't work on Heroku as Heroku's filesystem is r
 Screenshots:
 
 Home page: Just like the one shown in the wireframe
-![root page](https://www.dropbox.com/s/ejy5d8np7cvqkhp/Screenshot%202015-11-22%2019.14.28.png?dl=0)
+![root page](https://www.dropbox.com/s/kapm5e064yk4phi/Screenshot%202015-11-22%2020.40.32.png?dl=0)
 
 Pagination:
-![pagination on index page](https://www.dropbox.com/s/4kwvz2ikjlyx0nx/Screenshot%202015-11-22%2019.18.16.png?dl=0)
+![pagination on index page](https://www.dropbox.com/s/syhobazxa0gt8dx/Screenshot%202015-11-22%2020.43.03.png?dl=0)
 
 Favorites page:
-![favorites page](https://www.dropbox.com/s/059i84h1688mjqt/Screenshot%202015-11-22%2019.21.57.png?dl=0)
+![favorites page](https://www.dropbox.com/s/vmk1gbvevo4k81c/Screenshot%202015-11-22%2020.44.05.png?dl=0)
 
 Notes:
 
