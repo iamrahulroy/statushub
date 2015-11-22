@@ -26,6 +26,7 @@ class UserFavoritesController < ApplicationController
 
   private
   def get_user_favorite
-    @user_favorite = current_user.user_favorites.find(params[:id])
+    # debugger
+    @user_favorite = current_user.user_favorites.find_by(favorite_id: params[:id])
   end
 end
