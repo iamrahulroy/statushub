@@ -1,6 +1,6 @@
 Statushub: A product by hackers at Idfy for hackers.
 
-Installation instructions
+Installation instructions:
 * cd statushub && bundle
 * rake db:migrate
 * bundle exec rake sunspot:solr:start
@@ -21,3 +21,5 @@ Deployment on Heorku:
 * heroku open
 
 Caveats: Search & image feature won't work on Heroku as Heroku's filesystem is readonly and solr search add on is paid on heroku https://elements.heroku.com/addons/websolr
+
+Documentation & Notes: Run `rake notes` to get a list of notes.

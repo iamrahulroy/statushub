@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   belongs_to :category
+
+  scope :vegan, -> (is_veg) { where is_veg: is_veg }
+  scope :vegans, -> { where is_veg: true }
 end
 
 # == Schema Information

@@ -1,0 +1,18 @@
+<div class="users" >
+  <% @users.each do |user| %>
+    <div class="well infobox">
+      <div class="btn btn-default" id="horizonal_button"> <%= user.category.name %></div><br>
+      <blockquote><p><%= user.status %></p></blockquote>
+      drinks: <div class="<%= drink?(user) %>"></div>
+      vegan: <div class="<%= is_vegan?(user) %>"></div>
+      height: <%= user.height %> cm
+      weight: <%= weight_in_kg(user.weight) %> KG
+      <div><%= image_tag user.image.url %><br/></div>
+    </div>
+  <% end %>
+</div>
+
+<div class="custom_pagination">
+  <%= will_paginate @users %>
+</div>
+

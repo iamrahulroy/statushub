@@ -11,7 +11,11 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<%= yield %>
+<%= render 'layouts/sidebar' %>
+
+<div class="page-content">
+  <%= yield %>
+</div>
 
 </body>
 </html>

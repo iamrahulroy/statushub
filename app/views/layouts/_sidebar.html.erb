@@ -1,0 +1,16 @@
+<div id="wrapper">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="">
+          IDFY StatusHub
+        </a>
+      </li>
+      <% @categories.each do |category| %>
+        <li><%= link_to category.name, category_path(category) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
