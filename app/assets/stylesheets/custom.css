@@ -3,6 +3,9 @@
   background-color: #AFA5A5;
 }
 
+.search-form {
+  width: 50%;
+}
 
 /* blockquote */
 blockquote {
