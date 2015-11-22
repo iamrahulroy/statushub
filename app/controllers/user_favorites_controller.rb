@@ -3,7 +3,7 @@ class UserFavoritesController < ApplicationController
   before_action :get_user_favorite, only: [:destroy]
 
   def index
-    @favorites = current_user.favorites.paginate(page: params[:page], per_page: 10)
+    @favorites = current_user.favorites.includes(:category).paginate(page: params[:page], per_page: 10)
   end
 
   def create

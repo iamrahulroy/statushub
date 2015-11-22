@@ -37,4 +37,13 @@ Rails.application.configure do
 
   # Required by devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.rails_logger = true
+    Bullet.console = true
+    Bullet.n_plus_one_query_enable = true
+    Bullet.unused_eager_loading_enable = true
+    Bullet.counter_cache_enable = true
+  end
 end
