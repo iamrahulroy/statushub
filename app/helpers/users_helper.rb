@@ -8,6 +8,6 @@ module UsersHelper
   end
 
   def weight_in_kg(weight)
-    weight / 1000
+    weight.present? ? weight / 1000 : 'N/A'
   end
 end

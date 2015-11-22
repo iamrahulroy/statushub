@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     end
   end
   resources :categories, only: [:index, :show]
+  resources :user_favorites, only: [:create, :destroy, :index]
 end

@@ -8,5 +8,8 @@
   <% end %>
 </div>
 
-<div class="">
-<%= render 'shared/users' %>
+<%= render partial: 'shared/user', collection: @users, as: :user %>
+
+<div class="custom_pagination">
+  <%= will_paginate @users %>
+</div>

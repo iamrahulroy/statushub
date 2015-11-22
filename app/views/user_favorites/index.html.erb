@@ -1,0 +1,9 @@
+<h1>User Favorites</h1>
+
+<%= render partial: 'shared/user', collection: @favorites, as: :user %>
+
+<div class="custom_pagination">
+  <%= will_paginate @favorites %>
+</div>
+
+

@@ -1,0 +1,14 @@
+<div class="users container" >
+  <div class="well infobox my-well">
+    <span class="btn btn-default" id="horizonal_button"> <%= user.category.name %></span><br><br>
+    <blockquote><p><%= user.status %></p></blockquote>
+    drinks: <span class="<%= drink?(user) %>"></span> |
+    vegan: <span class="<%= is_vegan?(user) %>"></span> |
+    height: <%= user.height %> cm |
+    weight: <%= weight_in_kg(user.weight) %> KG |
+    <div class="my-image pull-right"><%= image_tag user.image.url, class: 'img-circle' %><br/></div>
+    <%= link_to "Download", user_path(user, format: "pdf"), class: 'btn btn-info' %>
+    <!-- TODO: Other view logics can be moved into view helper as well just like below  -->
+    <%= add_or_remove_favorite(current_user, user) %>
+  </div>
+</div>
