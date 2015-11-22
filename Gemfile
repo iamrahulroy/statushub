@@ -37,3 +37,6 @@ gem 'draper'
 gem 'devise'
 gem 'faker'
 
+group :production do
+  gem 'rails_12factor'
+end

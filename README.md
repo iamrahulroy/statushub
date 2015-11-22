@@ -1,4 +1,4 @@
-Statushub: A product by hackers at Idfy for hackers.
+Statushub: A product by hackers at Idfy for hackers. Checkout the demo here
 
 Installation instructions:
 * cd statushub && bundle
@@ -21,5 +21,10 @@ Deployment on Heorku:
 * heroku open
 
 Caveats: Search & image feature won't work on Heroku as Heroku's filesystem is readonly and solr search add on is paid on heroku https://elements.heroku.com/addons/websolr
+
+Notes:
+1. Avoid different database in different environment(One of the rule from 'The Twelve Factors'). Breaking this rule for reviewer's convenience.
+2. Generally use git flow.
+3. Generally use .rvmrc or .ruby_version for setting ruby version & gemset. Not using here for convenience.
 
 Documentation & Notes: Run `rake notes` to get a list of notes.
