@@ -27,4 +27,13 @@ module UsersHelper
     'Checkout these cool status on Idfy Statushub'
   end
 
+  def show_image(user)
+    image_tag path(user), class: 'img-circle'
+  end
+
+  def path(user)
+    image_value = user.image.url.split('/').last.to_i
+    "http://idfy.0x10.info/api/avatar/#{image_value}.png"
+  end
+
 end
