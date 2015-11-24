@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   belongs_to :category
+  delegate :name, to: :category, prefix: true
 
   has_many :user_favorites
   has_many :favorites, through: :user_favorites

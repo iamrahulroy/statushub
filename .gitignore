@@ -21,3 +21,5 @@ log/sunspot-solr-development.log.lck
 
 .byebug_history
 public/uploads/
+project_track.md
+rails_best_practices_output.html
