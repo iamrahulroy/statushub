@@ -17,9 +17,7 @@ class UsersController < ApplicationController
   end
 
   def search
-    @users = User.search do
-      fulltext params[:query]
-    end.results
+    @users = User.search(params[:query]).paginate(page: params[:page], per_page: 10)
     render 'index'
   end
 end

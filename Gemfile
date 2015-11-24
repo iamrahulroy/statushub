@@ -42,7 +42,7 @@ gem 'faker'
 gem 'prawn'
 gem 'chartkick'
 gem 'carrierwave-dropbox'
-gem 'rhc'
+gem 'pg_search'
 
 group :production do
   gem 'pg'

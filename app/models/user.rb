@@ -17,13 +17,10 @@ class User < ActiveRecord::Base
   scope :vegan, -> (is_veg) { where is_veg: is_veg }
   scope :vegans, -> { where is_veg: true }
 
-  # searchable do
-  #   text :status
-  #   integer :height
-  #   string :category do
-  #     category.try(:name)
-  #   end
-  # end
+  include PgSearch
+  pg_search_scope :search, against: [:status, :height],
+                  using: { tsearch: { dictionary: 'english' } },
+                  associated_against: { category: :name }
 
 end
 
