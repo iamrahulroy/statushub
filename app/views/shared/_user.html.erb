@@ -7,7 +7,7 @@
     vegan: <span class="<%= is_vegan?(user) %>"></span> |
     height: <%= user_height(user) %> cm |
     weight: <%= weight_in_kg(user.weight) %> KG |
-    <div class="my-image pull-right"><%= image_tag user.image.url, class: 'img-circle' %><br/></div>
+    <div class="my-image pull-right"><%= image_tag user.image, class: 'img-circle' %><br/></div>
     <%= link_to "Download", user_path(user, format: "pdf"), class: 'btn btn-info' %>
     <!-- TODO: Other view logics can be moved into view helper as well just like below  -->
     <%= add_or_remove_favorite(current_user, user) if current_user %>

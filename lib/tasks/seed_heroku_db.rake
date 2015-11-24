@@ -29,7 +29,7 @@ namespace :heroku do
         user.is_veg = member["is_veg"].try(:to_i) == 1 ? true : false
         user.drink = member["drink"].try(:to_i) == 1 ? true : false
         # FIXME: Use S3 for attachment
-        user.remote_image_url = member["image"] if member["image"].present?
+        user.image = member["image"] if member["image"].present?
         user.email = Faker::Internet.email
         user.password = "testing"
         user.save
