@@ -1,4 +1,4 @@
-Statushub: A product by hackers at Idfy for hackers. Checkout the [demo here](https://immense-cove-8413.herokuapp.com/)
+Statushub: This was my submission for IDFY's [HackerEarth challenge](https://www.hackerearth.com/idfy-full-stack-developer-hiring-challenge/). Please bear in mind that the app was supposed to be completed in 12 hours, as a result some of the best practices were avoided in order to get the things done on time. Checkout the [demo here](https://immense-cove-8413.herokuapp.com/)
 
 Installation instructions:
 
@@ -13,7 +13,7 @@ Stack:
 * Ruby on Rails: Web application fram
 * Sqlite3 for development: It doesn't require any setup.
 * Postgresql(for heroku): Production database. Usually I keep same database across all environments, but in this case I'm using different db's to make installation easier.
-* Solr: For search
+* pgSearch: For search.
 
 Deployment on Heorku:
 
@@ -23,8 +23,6 @@ Deployment on Heorku:
 * heroku run rake db:migrate
 * heroku run rake heroku:seed
 * heroku open
-
-Caveats: Search & image feature won't work on Heroku as Heroku's filesystem is readonly and solr search add on is paid on heroku https://elements.heroku.com/addons/websolr
 
 Screenshots:
 All of the screenshots are in screenshots directory.
